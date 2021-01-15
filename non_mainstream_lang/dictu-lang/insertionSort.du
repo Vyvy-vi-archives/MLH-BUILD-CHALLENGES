@@ -1,0 +1,29 @@
+import Datetime;
+print(Datetime.now());
+
+def insertionSort(list) {
+ var sortedList = list.copy();
+
+  for (var i = 1; i < sortedList.len(); ++i) {
+    var key = sortedList[i];
+    var j = i - 1;
+    while ((j >= 0) and (sortedList[j]) > key) {
+        sortedList[j+1] = sortedList[j];
+        j-=1;
+      }
+    sortedList[j+1] = key;
+  }
+
+ return sortedList;
+}
+
+var initialList = input('Enter list of number elements, separated by spaces: ');
+var initialList = initialList.split(" ");
+for (var i = 0; i < initialList.len(); ++i) {
+  initialList[i] = initialList[i].toNumber(); 
+}
+
+print('Initial List:');
+print(initialList);
+print('Sorted List:');
+print(insertionSort(initialList));
