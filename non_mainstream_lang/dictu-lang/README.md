@@ -21,4 +21,7 @@ Docs- https://dictu-lang.com/
 - Runnning the code:
   `./dictu insertionSort.du`
 
+- Enter space seperated numbers...
+
+
 :))
